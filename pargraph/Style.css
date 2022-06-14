@@ -1,0 +1,331 @@
+
+/*
+menu:
+
+(1) Global Rules.
+
+(2) Root.
+
+(3) Header. 
+
+(4) Main.
+
+(5) section 1.
+
+(6) section 2.
+
+(7) Footer.
+
+(8) icons.
+
+
+
+*/
+
+/*###################################################################*/
+
+/*---Start  Global Rules---*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:var(--ff-main) ;
+    line-height: 1.6;
+    min-height: 100vh; 
+}
+ul{
+    list-style: none;
+
+}
+nav li{
+display: inline-block;
+}
+a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;    
+}
+p{
+    font-size: var(--f-small);
+    color: var(--font-color);
+}
+
+/*---End  Global Rules---*/
+
+
+/*###################################################################*/
+
+
+/*---Start Root---*/
+/*==font==*/
+:Root{
+    --ff-main:'Montserrat','sans-serif';
+    --f-big: 76px;
+    --f-Meadium: 24px;
+    --f-small: 16px;
+    --f-header:18px;
+}
+
+/*==color==*/
+:root{
+    --btn-font:#fff;
+   --bg-btn:#000000;
+
+   --btn-font-hover:#000;
+   --bg-btn-hover:#fff;
+
+   --font-color: #333333;
+   --bg-font-color:#fff;
+   
+    --header:#ffe3d6;
+    --bg-color:#bdeaef;
+    
+}
+/*---End Root---*/
+
+/*###################################################################*/
+
+
+/*---Start Header---*/
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--header);
+    font-size: var(--f-header);
+    padding: 16px;
+}
+nav li {
+    margin: 5px;
+
+}
+nav li a:hover{
+    color:#c78f75 ;
+  
+}
+.home{
+    font-weight: bold;
+}
+header .home:hover{
+    color: red;
+}
+
+.cbl ul li{
+    display:inline-block ;
+    margin-left: 20px;
+
+}
+.cbl span{
+    margin-left: 8px;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    color: var(--btn-font);
+    background-color: var(--bg-btn);
+    border-radius: 5px;
+}
+.btn:hover{
+    color: var(--btn-font-hover);
+    background-color: var(--bg-btn-hover);
+    width: 120px;
+    transition: 1s;
+}
+
+/*---End Header---*/
+
+/*###################################################################*/
+
+
+/*---Start Main---*/
+main{
+    text-align: center;
+    background-image: url("Photo/main.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+}
+.scroll{
+    position: absolute;
+    background-color: rgb(255, 0, 157);
+    width:300px;
+    height: 5px;
+    right: 0;
+    bottom: 10px;
+    position: fixed;
+}
+.scroll::after{
+    content: "The Nail Lab";
+    position: absolute;
+    bottom: 0px;
+    right: 80px;
+    font-size: var(--f-Meadium);
+    color: rgb(255, 0, 157);
+}
+h1:hover{   
+    opacity: 0.5;
+}
+
+main h1{
+    font-size: var(--f-big);
+    padding-top: 150px;
+}
+/*---End Main---*/
+
+/*###################################################################*/
+
+
+/*---Start section 1---*/
+.section-one{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.section-left {
+    width: 45%;
+    background-image: url("Photo/1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -300px;
+}
+.section-right{
+    width: 55%;
+}
+.section-right .imag{
+    background-image: url("Photo/2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+.section-right .imag,.se-text{
+    height: 50%;
+
+ }
+
+.se-text{
+    padding: 35px;
+    padding-right: 200px;
+    margin-bottom: 20px;
+}
+.se-text h3{
+    font-size: var(--f-Meadium);
+
+}
+.se-text h2{
+    font-size: var(--f-big);
+
+}
+
+/*---End  section 1---*/
+
+/*###################################################################*/
+
+
+/*---Start  section 2---*/
+.section-two{
+    background-color: var(--bg-color);
+    width: 100%;
+   text-align: center;
+   padding-top: 100px;
+   padding-bottom: 70px;
+}
+.two-top p{
+    font-size: var(--f-Meadium);
+
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 0;
+    height: 80vh;
+
+
+}
+.cards div{
+    width: calc(100%/5);
+    font-size: var(--f-big);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 700px;
+}
+.cards .one{
+    background-image: url("Photo/3.jpeg");
+}
+.cards .two{
+background-image: url("Photo/5.jpeg");
+}
+.cards .three{
+background-image: url("Photo/4.jpeg");
+}
+.one,.two,.three{
+    box-shadow:20px 10px 10px  #b3a7a7;
+    transition: 0.5s;
+ }
+.cards .one:hover,.two:hover,.three:hover{
+    box-shadow:-20px -10px 20px 0  #b3a7a7;
+ }
+/*---End  section 2---*/
+
+/*###################################################################*/
+
+
+
+
+/*---Start Footer---*/
+footer{
+    padding-top: 50px;
+    padding-bottom: 70px;
+    
+    background-color: var(--header);
+}
+footer .top{
+    display: flex;
+    justify-content:center;
+    gap: 100px;
+}
+footer .top div {
+    border-left: 2px solid var(--font-color);
+    padding-left: 10px;
+}
+footer .top h3{
+    margin: 5px;
+    font-size: var(--f-Meadium);
+}
+footer .bottom{
+margin-left: 240px;
+margin-top: 70px;
+}
+/*---End Footer---*/
+
+
+/*---End icons---*/
+.icons{
+position: fixed;
+left: 15px;
+top: 300px;
+
+}
+.icons .fa{
+height: 40px;
+font-size:30px ;
+display: block;
+color:#c78f75 ;
+
+}
+.icons .fa:hover{
+    color:var(--font-color) ;
+}
+
+ /*---End icons---*/
